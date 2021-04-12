@@ -35,7 +35,7 @@ $(function () {
             username: $('#regs [name=username]').val(),
             password: $('#regs [name=password]').val()
         }
-        $.post('http://api-breakingnews-web.itheima.net/api/reguser', data, function (res) {
+        $.post('/api/reguser', data, function (res) {
             if (res.status !== 0) return layer.msg(res.message)
 
             // 提示用户注册成功
@@ -63,7 +63,6 @@ $(function () {
             url: '/api/login',
             data: data,
             success: function (res) {
-                console.log(res.token);
                 if (res.status !== 0) return layer.msg(res.message)
                 // 将登录成功得到的 token 字符串，保存到 localStorage 中
                 localStorage.setItem('token', res.token)
