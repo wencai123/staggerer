@@ -11,14 +11,6 @@ const options = {
 // 1.3 创建裁剪区域
 $image.cropper(options)
 
-// // 将裁剪后的图片，输出为 base64 格式的字符串
-// var dataURL = $image
-//     .cropper('getCroppedCanvas', { // 创建一个 Canvas 画布
-//         width: 100,
-//         height: 100
-//     })
-//     .toDataURL('image/png')       // 将 Canvas 画布上的内容，转化为 base64 格式的字符串
-
 
 // 文件上传
 $('#upload').on('click', function () {
